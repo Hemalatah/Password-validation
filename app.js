@@ -63,14 +63,14 @@ submit.onclick = function() {
 
 	function checkRequirements() {
 		if(firstPassword.length < 16) {
-			firstPasswordIssuestracker.add("Password is too short");
+			firstPasswordIssuestracker.add("Password is too short, fewer than 16 characters");
 		}
 		else if(firstPassword.length > 100) {
-			firstPasswordIssuestracker.add("Password is too long");
+			firstPasswordIssuestracker.add("Password is too long, greater than 100 characters");
 		}
 
 		if(!firstPassword.match(/[\!\@\#\$\%\^\&\*]/g)) {
-			firstPasswordIssuestracker.add("Add atleast one special character");
+			firstPasswordIssuestracker.add("Add atleast one special character ie., symbol");
 		}
 
 		if(!firstPassword.match(/[\d]/g)) {
