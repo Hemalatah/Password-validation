@@ -85,6 +85,13 @@ submit.onclick = function() {
 			firstPasswordIssuestracker.add("add atleast one uppercase letter");
 		}
 
+		var illegalCharGroup = firstPassword.match(/[^A-z0-9\!\@\#\$\%\^\&\*]/g)
+		if(illegalCharGroup) {
+			illegalCharGroup.forEach(function(illegalChar) {
+				firstPasswordIssuestracker.add("Has an illegal character: " + illegalChar);
+			});
+		}
+
 
 	};
 
